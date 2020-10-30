@@ -1,21 +1,21 @@
 :root {
   --primary-color: #ebc355;
   --primary-color-hover: #ffe292;
-  --secundary-color: #666666;
-  --secundary-color-hover: #979797;
+  --secondary-color: #666666;
+  --secondary-color-hover: #979797;
   --invalid-color: #f78989;
   --invalid-color-hover: #ffaeae;
   --valid-color: #90d867;
   --valid-color-hover: #b3e794;
   --font-primary: #ffffff;
-  --font-secundary: #2d2e29;
+  --font-secondary: #2d2e29;
   --bg-color-primary: #2e2e2e;
-  --bg-color-secundary: radial-gradient(circle, rgba(230, 230, 230, 1) 0%, rgba(172, 172, 172, 1) 100%);
+  --bg-color-secondary: radial-gradient(circle, rgba(230, 230, 230, 1) 0%, rgba(172, 172, 172, 1) 100%);
   --font-size: 20px;
 }
 
 body {
-  background: var(--bg-color-secundary);
+  background: var(--bg-color-secondary);
 }
 
 form {
@@ -40,10 +40,13 @@ form {
   display: flex;
 }
 
-.code {
-  background-color: var(--bg-color-primary);
+.center {
+  justify-content: center;
 }
 
+.code {
+  margin-top: 50px;
+}
 /* INPUT */
 
 input:invalid {
@@ -91,7 +94,7 @@ label {
 }
 
 input[type="text"] {
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   font-size: var(--font-size);
   border: 0;
   height: 20px;
@@ -106,13 +109,13 @@ input[type="text"] {
 input[type="text"]:active,
 input[type="text"]:focus,
 input[type="text"]:hover {
-  background-color: var(--secundary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
 
 /*TEXTAREA */
 
 textarea {
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   font-size: var(--font-size);
   border: 0;
   height: 120px;
@@ -137,7 +140,7 @@ input:hover:invalid {
 textarea:active,
 textarea:focus,
 textarea:hover {
-  background-color: var(--secundary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
 
 /* CHECKBOX */
@@ -173,19 +176,19 @@ input[type="checkbox"]:after {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   top: 0;
   left: 0;
   transition: 0.2s ease-out;
 }
 
 input[type="checkbox"]:hover:after {
-  background-color: var(--secundary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
 
 input[type="checkbox"]:checked:after {
   background-color: var(--primary-color);
-  color: var(--font-secundary);
+  color: var(--font-secondary);
 }
 
 input[type="checkbox"]:checked:hover:after {
@@ -193,7 +196,7 @@ input[type="checkbox"]:checked:hover:after {
 }
 
 input[type="checkbox"]:checked + label {
-  color: var(--font-secundary);
+  color: var(--font-secondary);
 }
 
 /*RADIO */
@@ -225,19 +228,19 @@ input[type="radio"]:after {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   top: 0;
   left: 0;
   transition: 0.2s ease-out;
 }
 
 input[type="radio"]:hover:after {
-  background-color: var(--secundary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
 
 input[type="radio"]:checked:after {
   background-color: var(--primary-color);
-  color: var(--font-secundary);
+  color: var(--font-secondary);
 }
 
 input[type="radio"]:checked:hover:after {
@@ -245,14 +248,14 @@ input[type="radio"]:checked:hover:after {
 }
 
 input[type="radio"]:checked + label {
-  color: var(--font-secundary);
+  color: var(--font-secondary);
 }
 
 /*SELECT */
 
 select {
   display: block;
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   font-size: var(--font-size);
   border: 0;
   padding: 10px;
@@ -267,7 +270,7 @@ select {
 }
 
 select:hover {
-  background-color: var(--secundary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
 
 select option:hover,
@@ -276,7 +279,7 @@ select option:focus {
   outline: none;
   cursor: pointer;
   background-color: var(--primary-color-hover) !important;
-  color: var(--font-secundary);
+  color: var(--font-secondary);
 }
 
 /*BTN*/
@@ -316,7 +319,7 @@ select option:focus {
 /*SECUNDARY BTN*/
 
 .signup-btn {
-  background-color: var(--secundary-color);
+  background-color: var(--secondary-color);
   display: inline-block;
   cursor: pointer;
   color: var(--font-primary);
@@ -329,7 +332,7 @@ select option:focus {
   transition: linear 0.2s;
 }
 .signup-btn:hover {
-  background-color: var(--secundary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
 .signup-btn:active {
   position: relative;
@@ -337,5 +340,5 @@ select option:focus {
 }
 
 .signup-btn:focus {
-  background-color: var(--secundary-color-hover);
+  background-color: var(--secondary-color-hover);
 }
