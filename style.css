@@ -7,14 +7,28 @@
   --invalid-color-hover: #ffaeae;
   --valid-color: #90d867;
   --valid-color-hover: #b3e794;
-  --primary-font: #ffffff;
-  --secundary-font: #2d2e29;
-  --bg-color: #2e2e2e;
+  --font-primary: #ffffff;
+  --font-secundary: #2d2e29;
+  --bg-color-primary: #2e2e2e;
+  --bg-color-secundary: radial-gradient(circle, rgba(230, 230, 230, 1) 0%, rgba(172, 172, 172, 1) 100%);
   --font-size: 20px;
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color-secundary);
+}
+
+form {
+  background-color: var(--bg-color-primary);
+  width: 400px;
+  margin-top: 100px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -24,6 +38,10 @@ body {
 
 .flex {
   display: flex;
+}
+
+.code {
+  background-color: var(--bg-color-primary);
 }
 
 /* INPUT */
@@ -68,7 +86,7 @@ input[type="submit"]:hover {
 
 label {
   font-size: var(--font-size);
-  color: var(--primary-font);
+  color: var(--font-primary);
   margin-bottom: 10px;
 }
 
@@ -80,7 +98,7 @@ input[type="text"] {
   padding: 10px;
   appearance: none;
   outline: none;
-  color: var(--primary-font);
+  color: var(--font-primary);
   transition: linear 0.2s;
   width: 230px;
 }
@@ -101,8 +119,11 @@ textarea {
   padding: 10px;
   appearance: none;
   outline: none;
-  color: var(--primary-font);
+  color: var(--font-primary);
   width: 230px;
+  transition: 0.2s background-color linear;
+  max-width: 230px;
+  max-height: 300px;
 }
 
 input:invalid {
@@ -164,7 +185,7 @@ input[type="checkbox"]:hover:after {
 
 input[type="checkbox"]:checked:after {
   background-color: var(--primary-color);
-  color: var(--secundary-font);
+  color: var(--font-secundary);
 }
 
 input[type="checkbox"]:checked:hover:after {
@@ -172,7 +193,7 @@ input[type="checkbox"]:checked:hover:after {
 }
 
 input[type="checkbox"]:checked + label {
-  color: var(--secundary-font);
+  color: var(--font-secundary);
 }
 
 /*RADIO */
@@ -216,7 +237,7 @@ input[type="radio"]:hover:after {
 
 input[type="radio"]:checked:after {
   background-color: var(--primary-color);
-  color: var(--secundary-font);
+  color: var(--font-secundary);
 }
 
 input[type="radio"]:checked:hover:after {
@@ -224,7 +245,7 @@ input[type="radio"]:checked:hover:after {
 }
 
 input[type="radio"]:checked + label {
-  color: var(--secundary-font);
+  color: var(--font-secundary);
 }
 
 /*SELECT */
@@ -239,7 +260,7 @@ select {
   width: 250px;
   appearance: none;
   outline: none;
-  color: var(--primary-font);
+  color: var(--font-primary);
   transition: linear 0.2s;
   appearance: none;
   cursor: pointer;
@@ -255,7 +276,7 @@ select option:focus {
   outline: none;
   cursor: pointer;
   background-color: var(--primary-color-hover) !important;
-  color: var(--secundary-font);
+  color: var(--font-secundary);
 }
 
 /*BTN*/
@@ -298,7 +319,7 @@ select option:focus {
   background-color: var(--secundary-color);
   display: inline-block;
   cursor: pointer;
-  color: var(--primary-font);
+  color: var(--font-primary);
   font-size: var(--font-size);
   width: 125px;
   height: 55px;
