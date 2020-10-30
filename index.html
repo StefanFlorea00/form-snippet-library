@@ -8,11 +8,78 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.min.css"
     />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.min.js"></script>
   </head>
   <body>
     <h1>Form Snippet Library</h1>
 
+    <form>
+    <div class="textbox-div">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+    </div>
+
+    <div class="textbox-div">
+      <label for="password">Password<span class="required">*</span></label>
+      <input type="text" id="password" name="password" required>
+      </div>
+
+    <div class="textbox-div">
+      <label for="email">Email<span class="required">*</span></label>
+      <input type="text" id="email" name="email" required>
+      </div>
+
+      <div class="textbox-div">
+        <label for="email">Description<span class="required">*</span></label>
+        <textarea id="description" name="description" rows="4" cols="50" ></textarea>
+        </div>
+
+
+    <div class="textbox-div">
+      <label>Select</label>
+      <div class="flex">
+    <div class="checkbox-input-div">
+    <input type="checkbox" name="check" id="check" />
+    <label for="check" class="select-label">Check</label>
+    </div>
+    <div class="checkbox-input-div">
+      <input type="checkbox" name="check" id="check" />
+      <label for="check" class="select-label">Check</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="textbox-div radio">
+    <label>Radio</label>
+    <div class="flex">
+  <div class="radio-input-div">
+  <input type="radio" name="circle" id="circle" />
+  <label for="radio" class="select-label">Option1</label>
+  </div>
+  <div class="radio-input-div">
+    <input type="radio" name="circle" id="circle"/>
+    <label for="circle" class="select-label" >Option2</label>
+    </div>
+  </div>
+</div>
+
+<div class="textbox-div">
+<label>Select</label>
+    <select name="drop" id="drop">
+      <option value="option1">option1</option>
+      <option value="option2">option2</option>
+      <option value="option3">option3</option>
+      <option value="option4">option4</option>
+    </select>
+  </div>
+  
+  <div class="btn-div flex">
+    <input type="submit" class="login-btn" value="Submit">
+    <button class="signup-btn">Sign up</button>
+  </div>
+</form>
     <!-- if you need to show copy-pastable code, you can use the following-->
     <!--<pre><code class="language-html"><input type=""></code></pre>-->
   </body>
